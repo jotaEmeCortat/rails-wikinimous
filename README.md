@@ -1,24 +1,53 @@
-# README
+# Wikinimous
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Project developed during the [Le Wagon](https://github.com/lewagon) BootCamp Full Stack.
 
-Things you may want to cover:
+## Objective
 
-* Ruby version
+Build an anonymous wiki (like [this one](https://wikinimous.lewagon.com/)) where anyone can create a
+new article or update an existing one.
 
-* System dependencies
+## Setup
 
-* Configuration
+To set up the Rails Stupid Coaching application, follow these steps:
 
-* Database creation
+Clone the repository:
 
-* Database initialization
+```sh
+  git clone git@github.com:jotaEmeCortat/rails-wikinimous.git
+  cd rails-wikinimous
+```
 
-* How to run the test suite
+Install dependencies: Make sure you have Ruby and Bundler installed. Then run:
 
-* Services (job queues, cache servers, search engines, etc.)
+```sh
+  bundle install
+```
 
-* Deployment instructions
+Set up the database:
 
-* ...
+```sh
+  rails db:create db:migrate db:seed
+```
+
+Start the Rails server:
+
+```sh
+  rails server
+```
+
+Access the application: Open your web browser and go to http://localhost:3000.
+
+## Testing
+
+To run the tests, use the following command:
+
+```sh
+  rails test:system
+```
+
+## Technologies Used
+
+- Ruby on Rails
+- Faker
+- Bootstrap

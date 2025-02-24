@@ -1,5 +1,13 @@
-<%= form_with model:(@article) do |f| %>
-  <%= f.text_field :title %>
-  <%= f.text_field :content, data: { editor: 'markdown' }, rows: 10 %>
-  <%= f.submit class: 'btn btn-primary my-4' %>
+<%= form_with model: @article, local: true, html: { class: 'form' } do |f| %>
+  <div class="form-group">
+    <%= f.label :title, class: 'form-label' %>
+    <%= f.text_field :title, class: 'form-control' %>
+  </div>
+  <div class="form-group mt-4">
+    <%= f.label :content, class: 'form-label' %>
+    <%= f.text_area :content, class: 'form-control', rows: 6 %>
+  </div>
+  <div class="form-group">
+    <%= f.submit class: 'btn btn-primary my-4' %>
+  </div>
 <% end %>
